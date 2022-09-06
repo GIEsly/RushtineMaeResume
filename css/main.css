@@ -1,0 +1,435 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Nunito+Sans:wght@200;300;600;800;900&family=Radio+Canada:wght@300;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+section.main-header {
+  background: #1a1a1a;
+  width: 100%;
+  height: 100vh;
+}
+
+.inner-nav {
+  /* Navigation Section Area */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+.inner-nav .logo {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .8rem;
+  color: #a1a1a1;
+}
+
+.inner-nav .logo span {
+  color: #ffcc00;
+  font-style: italic;
+}
+
+.inner-nav nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #ffcc00;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.inner-nav nav .close-button {
+  width: 2em;
+  float: right;
+  margin: 2em;
+  cursor: pointer;
+}
+
+.inner-nav nav ul {
+  padding: 0;
+  margin-top: 6em;
+}
+
+.inner-nav nav ul a {
+  padding: .75em 2em;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+.inner-nav nav ul a:hover {
+  background: white;
+}
+
+.inner-nav .open-button {
+  width: 1.5em;
+  cursor: pointer;
+}
+
+.inner-nav .open-nav {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.rushtine-info {
+  /* Ruhstine Info Section Area */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.rushtine-info .rushtine-image {
+  width: 10em;
+  margin-top: 5em;
+}
+
+.rushtine-info .name-section {
+  line-height: 1.4em;
+}
+
+.rushtine-info .name-section h1 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: white;
+  margin-top: .8em;
+}
+
+.rushtine-info .name-section h2 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: .4em;
+  opacity: .4;
+}
+
+.rushtine-info .name-section p {
+  text-transform: uppercase;
+  font-size: .7rem;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.rushtine-info .contact-details-mobile {
+  width: 70%;
+  margin: 0 auto;
+  color: white;
+  font-size: .7rem;
+  opacity: .6;
+  letter-spacing: .1em;
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+
+.rushtine-info .contact-details-mobile .icon {
+  display: none;
+}
+
+.rushtine-info .objective-section {
+  width: 79%;
+  margin: 0 auto;
+  color: white;
+}
+
+.rushtine-info .objective-section h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.rushtine-info .objective-section p {
+  font-size: .6rem;
+  opacity: .7;
+  line-height: 1.5em;
+  letter-spacing: .1em;
+}
+
+.contact-details {
+  display: none;
+}
+
+section.about {
+  width: 100vw;
+  height: 100vh;
+}
+
+section.about .container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section.about .container h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding-top: 3.8em;
+  padding-bottom: 1em;
+}
+
+section.about .container ul {
+  margin: 0;
+  padding-left: .1em;
+}
+
+section.about .container ul li {
+  font-size: .9rem;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+}
+
+section.about .container ul li:before {
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url(/images/icons/check.png);
+  background-size: contain;
+  margin-right: .5em;
+}
+
+section.work-experience {
+  width: 100vw;
+  height: 100vh;
+  background: #1a1a1a;
+}
+
+section.work-experience .container {
+  width: 79%;
+  margin: 0 auto;
+}
+
+section.work-experience .container .costa-logo-position {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+section.work-experience .container .costa-logo-position .costa-logo {
+  width: 4.8em;
+  padding-right: 1em;
+}
+
+section.work-experience .container .costa-logo-position .details h2 {
+  font-size: 1rem;
+  line-height: .9em;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  color: #ffcc00;
+}
+
+section.work-experience .container .costa-logo-position .details h2 span {
+  font-size: .72rem;
+  color: white;
+  opacity: .7;
+  font-weight: none;
+}
+
+section.work-experience .container h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  color: white;
+}
+
+section.work-experience .container ul {
+  margin: 0;
+  padding-left: .1em;
+  padding-top: 2em;
+}
+
+section.work-experience .container ul li {
+  font-size: .8rem;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+  color: white;
+  opacity: .6;
+}
+
+section.work-experience .container ul li::before {
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url(/images/icons/check.png);
+  background-size: contain;
+  margin-right: .5em;
+}
+
+section.certificate {
+  width: 100vw;
+  height: 100vh;
+}
+
+section.certificate .container {
+  width: 79%;
+  margin: 0 auto;
+  padding: 9em 0;
+}
+
+section.certificate .container h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+section.certificate .container ul {
+  margin: 0;
+  padding-left: .1em;
+  padding-top: 2em;
+}
+
+section.certificate .container ul li {
+  font-size: .9em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+}
+
+section.certificate .container ul li:before {
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url(/images/icons/check.png);
+  background-size: contain;
+  margin-right: .5em;
+}
+
+section.skills-reference {
+  width: 100vw;
+  height: 100vh;
+  padding: 9em 0;
+  background: #1a1a1a;
+}
+
+section.skills-reference .container {
+  width: 79%;
+  margin: 0 auto;
+}
+
+section.skills-reference section.skills {
+  margin-bottom: 4em;
+}
+
+section.skills-reference section.skills h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  color: white;
+}
+
+section.skills-reference section.skills ul {
+  margin: 0;
+  padding-left: .1em;
+}
+
+section.skills-reference section.skills ul li {
+  font-size: .9rem;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+  color: white;
+  opacity: .7;
+}
+
+section.skills-reference section.skills ul li:before {
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url(/images/icons/check.png);
+  background-size: contain;
+  margin-right: .5em;
+}
+
+section.skills-reference section.reference h2 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  color: white;
+}
+
+section.skills-reference section.reference p {
+  color: white;
+  opacity: .7;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: black;
+  color: white;
+  padding: 1em;
+  text-transform: uppercase;
+  font-size: .5rem;
+  letter-spacing: .4em;
+}
+
+footer p {
+  opacity: .5;
+}

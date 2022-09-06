@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Nunito+Sans:wght@200;300;600;800;900&family=Radio+Canada:wght@300;600;700&display=swap');
+
+*{margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nunito Sans', sans-serif;}
+
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+// ------- Color Properties --------------------------------
+$colors: (
+    primary: #1a1a1a,
+    light-primary: #666666,
+    secondary: #ffcc00
+);
+
+@function my-colors($color-name){
+    @return map-get($colors, $color-name );
+};
+// ------- End Color Properties ----------------------------
+
+// ------- Header Section Area -----------------------------
+section.main-header {
+    background: my-colors(primary);
+    width: 100%;
+    height: 100vh;
+}
+
+.inner-nav {                   /* Navigation Section Area */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
+    .logo {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: .8rem;
+        color: rgb(161, 161, 161);
+
+        span {
+            color: my-colors(secondary);
+            font-style: italic;
+        }
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: my-colors(secondary);
+        height: 100vh;
+        width: 50%;
+        z-index: 999;
+
+        // Animation Section Trigger Here
+        transform: translateX(100%);
+        transition: transform .3s ease-in-out;
+
+        .close-button {
+            width: 2em;
+            float: right;
+            margin: 2em;
+            cursor: pointer;
+        }
+
+        ul {
+            padding: 0;
+            margin-top: 6em;
+
+            a {
+                padding: .75em 2em;
+                display: block;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #1a1a1a;
+
+                &:hover {
+                    background: rgb(255, 255, 255);
+                }
+            }
+        }
+
+    }
+
+    .open-button {
+        width: 1.5em;
+        cursor: pointer;
+    }
+
+    .open-nav {
+        transform: translateX(0%);
+    }
+}
+
+.rushtine-info {             /* Ruhstine Info Section Area */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .rushtine-image {
+        width: 10em;
+        margin-top: 5em;
+    }
+
+    .name-section {
+        line-height: 1.4em;
+
+        h1 {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            color: white;
+            margin-top: .8em;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            color: white;
+            font-size: 1rem;
+            letter-spacing: .4em;
+            opacity: .4;
+        }
+
+        p {
+            text-transform: uppercase;
+            font-size: .7rem;
+            color: my-colors(secondary);
+            font-weight: bold;
+        }
+    }
+
+    .contact-details-mobile {
+
+        width: 70%;
+        margin: 0 auto;
+        color: white;
+        font-size: .7rem;
+        opacity: .6;
+        letter-spacing: .1em;
+        margin-top: 2em;
+        margin-bottom: 4em;
+
+        .icon {
+            display: none;
+        }
+    }
+
+    .objective-section {
+        width: 79%;
+        margin: 0 auto;
+        color: white;
+
+        h2 {
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: .6rem;
+            opacity: .7;
+            line-height: 1.5em;
+            letter-spacing: .1em;
+        }
+    }
+
+}
+
+.contact-details {
+    display: none;
+}
+// ------- End Header Section Area -------------------------
+
+// ------- About Section Area ------------------------------
+section.about {
+    width: 100vw;
+    height: 100vh;
+    // background: greenyellow;
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            padding-top: 3.8em;
+            padding-bottom: 1em;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: .1em;
+
+            li {
+                font-size: .9rem;
+                margin-bottom: 1em;
+                margin-left: 2em;
+                position: relative;
+                &:before {
+                    content: '';
+                    left: -2em;
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    background: url(/images/icons/check.png);
+                    background-size: contain;
+                    margin-right: .5em;
+                }
+            }
+        }
+    }
+}
+// ------- End About Section Area --------------------------
+
+// ------- Work Experience Section Area --------------------
+section.work-experience {
+    width: 100vw;
+    height: 100vh;
+    background: my-colors(primary);
+
+    .container {
+        width: 79%;
+        margin: 0 auto;
+
+        .costa-logo-position {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .costa-logo {
+                width: 4.8em;
+                padding-right: 1em;
+            }
+
+            .details {
+                h2 {
+                    font-size: 1rem;
+                    line-height: .9em;
+                    text-align: left;
+                    padding: 0;
+                    margin: 0;
+                    color: my-colors(secondary);
+
+                    span {
+                        font-size: .72rem;
+                        color: white;
+                        opacity: .7;
+                        font-weight: none;
+                        
+                    }
+                }
+            }
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            padding-top: 2em;
+            padding-bottom: 1em;
+            color: white;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: .1em;
+            padding-top: 2em;
+
+            li {
+                font-size: .8rem;
+                margin-bottom: 1em;
+                margin-left: 2em;
+                position: relative;
+                color: white;
+                opacity: .6;
+
+                &::before {
+                    content: '';
+                    left: -2em;
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    background: url(/images/icons/check.png);
+                    background-size: contain;
+                    margin-right: .5em;
+                }
+            }
+
+        }
+    }
+}
+// ------- End Work Experience Section Area ----------------
+
+// ------- Certificate Section Area ------------------------
+section.certificate {
+    width: 100vw;
+    height: 100vh;
+    // background: greenyellow;
+
+    .container {
+        width: 79%;
+        margin: 0 auto;
+        padding: 9em 0;
+
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: .1em;
+            padding-top: 2em;
+
+            li {
+                font-size: .9em;
+                margin-bottom: 1em;
+                margin-left: 2em;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    left: -2em;
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    background: url(/images/icons/check.png);
+                    background-size: contain;
+                    margin-right: .5em;
+                }
+            }
+        }
+    }
+}
+// ------- End Certificate Section Area --------------------
+
+// ------- Skills And Reference Section Area ---------------
+section.skills-reference {
+    width: 100vw;
+    height: 100vh;
+    padding: 9em 0;
+    background: my-colors(primary);
+    .container {
+        width: 79%;
+        margin: 0 auto;
+    }
+
+    section.skills {
+        margin-bottom: 4em;
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            padding-bottom: 1em;
+            color: white;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: .1em;
+
+            li {
+                font-size: .9rem;
+                margin-bottom: 1em;
+                margin-left: 2em;
+                position: relative;
+                color: white;
+                opacity: .7;
+
+                &:before {
+                    content: '';
+                    left: -2em;
+                    position: absolute;
+                    width: 16px;
+                    height: 16px;
+                    background: url(/images/icons/check.png);
+                    background-size: contain;
+                    margin-right: .5em;
+                }
+            }
+        }
+    }
+
+    section.reference {
+
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-bottom: 1em;
+            color: white;
+        }
+
+        p {
+            color: white;
+            opacity: .7;
+        }
+    }
+}
+// ------- End Skills And Reference Section Area -----------
+
+// ------ Footer Section Area ------------------------------
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 1em;
+    text-transform: uppercase;
+    font-size: .5rem;
+    letter-spacing: .4em;
+
+     p{
+        opacity: .5;
+     }
+}
+// ------ End Footer Section Area --------------------------
